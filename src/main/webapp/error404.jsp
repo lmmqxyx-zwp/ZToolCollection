@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>index</title>
+    <title>Error 404</title>
 </head>
 <body>
-    Welcome to ZToolCollection
+    404
 </body>
 </html>
