@@ -4,6 +4,8 @@
 # Port     : 3306
 # Database : plusoft_test
 
+# create database plusoft_test character set utf8;
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
