@@ -1,9 +1,9 @@
 package com.by.ztc.task;
 
 import com.by.ztc.common.ZTC$Constant;
+import com.by.ztc.common.ZTC$SystemFunction;
 
-import java.io.File;
-import java.io.Serializable;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -16,11 +16,19 @@ import java.util.Date;
  */
 public class ZJSerialize {
 
-    // 1、实现序列化存储到文件，再从文件中读取出来
-    // 使用 临时目录
-    // 临时文件 ZjsA.out
-    File zjsAFile = new File(ZTC$Constant.ZTC_TEMP_DIR + File.separator + "ZjsA.out");
-    
+    public static void main(String[] args) throws Exception{
+        // 1、实现序列化存储到文件，再从文件中读取出来
+        // 使用 临时目录
+        // 临时文件 ZjsA.out
+        File zjsAFile = new File(ZTC$Constant.ZTC_TEMP_DIR + File.separator + "ZjsA.out");
+        System.out.println(File.separator);
+        System.out.println(zjsAFile.getPath());
+        ZTC$SystemFunction._systemPropertys();
+
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(zjsAFile));
+        ZjsA zjsa = new ZjsA(1,"zjsa", new Date(), "zwp", "序列化到文件");
+        oos.writeObject(zjsa);
+    }
 
 }
 
