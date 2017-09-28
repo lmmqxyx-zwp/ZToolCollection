@@ -16,14 +16,14 @@ public class ZTC$Constant {
     public static final String ZTC_FORMAT_YMD = "yyyy-mm-dd";
 
     // ZTC 临时目录 - 临时文件、测试文件、中间文件
-    public static final String ZTC_TEMP_DIR = "/ztctemp";
+    public static final String ZTC_TEMP_DIR = "/src/main/resources/ztctemp";
 
     // 分割线
     public static final String ZTC_PARTING_LINE = "ZTC $ --- $ --- $ --- $ --- $ --- $ --- $ CTZ";
 
     // # JVM 参数KEY
     // # - 54 S --------------------------------------------------------------
-    public static final String JAVA_RUNTIME_NAME = "java.runtime.name";
+    public static final String JAVA_RUNTIME_NAME = "java.runtime.name"; // -Java(TM) SE Runtime Environment
     public static final String SUN_BOOT_LIBRARY_PATH = "sun.boot.library.path";
     public static final String JAVA_VM_VERSION = "java.vm.version";
     public static final String JAVA_VM_VENDOR = "java.vm.vendor";
@@ -36,18 +36,18 @@ public class ZTC$Constant {
     public static final String SUN_JAVA_LAUNCHER = "sun.java.launcher";
     public static final String SUN_OS_PATCH_LEVEL = "sun.os.patch.level";
     public static final String JAVA_VM_SPECIFICATION_NAME = "java.vm.specification.name";
-    public static final String USER_DIR = "user.dir";
+    public static final String USER_DIR = "user.dir"; // - 工程根目录
     public static final String JAVA_RUNTIME_VERSION = "java.runtime.version";
     public static final String JAVA_AWT_GRAPHICSENV = "java.awt.graphicsenv";
     public static final String JAVA_ENDORSED_DIRS = "java.endorsed.dirs";
     public static final String OS_ARCH = "os.arch";
-    public static final String JAVA_IO_TMPDIR = "java.io.tmpdir";
+    public static final String JAVA_IO_TMPDIR = "java.io.tmpdir"; // -用户对应的自己的临时目录
     public static final String LINE_SEPARATOR = "line.separator";
     public static final String JAVA_VM_SPECIFICATION_VENDOR = "java.vm.specification.vendor";
     public static final String USER_VARIANT = "user.variant";
     public static final String OS_NAME = "os.name";
     public static final String SUN_JNU_ENCODING = "sun.jnu.encoding";
-    public static final String JAVA_LIBRARY_PATH = "java.library.path";
+    public static final String JAVA_LIBRARY_PATH = "java.library.path"; // -系统中配置的环境变量
     public static final String JAVA_SPECIFICATION_NAME = "java.specification.name";
     public static final String JAVA_CLASS_VERSION = "java.class.version";
     public static final String SUN_MANAGEMENT_COMPILER = "sun.management.compiler";

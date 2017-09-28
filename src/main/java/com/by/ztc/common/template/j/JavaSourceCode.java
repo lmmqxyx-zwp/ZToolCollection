@@ -18,9 +18,10 @@ public class JavaSourceCode {
     public static final String _STATIC = "static";
     public static final String _FINAL = "final";
     public static final String _STRING = "String";
+    public static final String _INT = "int";
 
     /**
-     * 常量定义
+     * 常量定义 String
      *
      * 返回 例子： - public static final String
      *
@@ -28,6 +29,17 @@ public class JavaSourceCode {
      */
     public static String getPublicStaticFinalString() {
         return _PUBLIC + _SPACE + _STATIC + _SPACE + _FINAL + _SPACE + _STRING + _SPACE;
+    }
+
+    /**
+     * 常量定义 int
+     *
+     * 返回 例子： - public static final int
+     *
+     * @return
+     */
+    public static String getPublicStaticFinalInt() {
+        return _PUBLIC + _SPACE + _STATIC + _SPACE + _FINAL + _SPACE + _INT + _SPACE;
     }
 
 }
