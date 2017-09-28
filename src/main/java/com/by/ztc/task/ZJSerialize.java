@@ -18,7 +18,6 @@ import java.util.Date;
  * ZjsB 没有实现Serialize接口，不能被序列化、反序列化
  *
  * 序列化的作用：
- * 
  *
  * @author zwp
  */
