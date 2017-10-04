@@ -1,16 +1,17 @@
 <%--
   Created by IntelliJ IDEA.
-  User: zwp
-  Date: 2017/9/25
-  Time: 14:45
+  User: byvai
+  Date: 2017/10/4
+  Time: 15:19
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%-- 后台登录页面 入口 --%>
 <html>
 <head>
-    <title>ZToolCollection</title>
+    <title>ZToolCollection | 管理后台登录</title>
 </head>
 <body>
-    Welcome to ZToolCollection
+    欢迎使用ZTC工具合集
 </body>
 </html>
