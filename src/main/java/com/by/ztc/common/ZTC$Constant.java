@@ -22,7 +22,7 @@ public class ZTC$Constant {
     public static final String ZTC_PARTING_LINE = "ZTC $ --- $ --- $ --- $ --- $ --- $ --- $ CTZ";
 
     // # JVM 参数KEY
-    // # - 54 S --------------------------------------------------------------
+    // # - 54 S -------------------------------------------------------------- S 45 - #
     public static final String JAVA_RUNTIME_NAME = "java.runtime.name"; // -Java(TM) SE Runtime Environment
     public static final String SUN_BOOT_LIBRARY_PATH = "sun.boot.library.path";
     public static final String JAVA_VM_VERSION = "java.vm.version";
@@ -77,6 +77,6 @@ public class ZTC$Constant {
     public static final String SUN_CPU_ENDIAN = "sun.cpu.endian";
     public static final String SUN_DESKTOP = "sun.desktop";
     public static final String SUN_CPU_ISALIST = "sun.cpu.isalist";
-    // # - 54 E --------------------------------------------------------------
+    // # - 54 E -------------------------------------------------------------- S 45 - #
 
 }

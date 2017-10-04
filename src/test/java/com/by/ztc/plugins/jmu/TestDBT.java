@@ -1,4 +1,4 @@
-package com.by.ztc.jmu;
+package com.by.ztc.plugins.jmu;
 
 import java.util.List;
 import java.util.Map;

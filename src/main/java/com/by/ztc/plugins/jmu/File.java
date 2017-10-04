@@ -1,9 +1,6 @@
-package com.by.ztc.jmu;
+package com.by.ztc.plugins.jmu;
 
 import java.io.*;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
 
 public class File {
 	public static String encoding = "UTF-8";

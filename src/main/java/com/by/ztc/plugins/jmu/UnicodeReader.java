@@ -1,4 +1,4 @@
-package com.by.ztc.jmu;
+package com.by.ztc.plugins.jmu;
 /**
  version: 1.1 / 2007-01-25
  - changed BOM recognition ordering (longer boms first)

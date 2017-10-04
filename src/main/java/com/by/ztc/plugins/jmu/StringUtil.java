@@ -1,4 +1,4 @@
-package com.by.ztc.jmu;
+package com.by.ztc.plugins.jmu;
 
 import java.util.Collection;
 import java.util.Iterator;

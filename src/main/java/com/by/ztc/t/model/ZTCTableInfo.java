@@ -1,36 +1,30 @@
 package com.by.ztc.t.model;
 
-import java.util.Date;
+import java.util.List;
 
-public class ZTCTableInfo {
+/**
+ * 数据表的实体
+ *
+ * 1、作用：当ZTC完成之后、表结构的展现（开发需要）
+ *
+ * @author zwp
+ */
+public class ZTCTableInfo extends DBBaseEntity {
 
-    // 主键
-    private Integer id;
     // 表名
     private String tableName;
     // 描述
     private String description;
     // 对应类名
     private String className;
-    // 创建时间
-    private Date createDate;
-    // 更新时间
-    private Date updateDate;
-    // 版本
-    private String version;
     // 备注
     private String remarks;
-
-    // TODO 父表和子表的关系
-
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    // 字表
+    private List<ZTCTableInfo> childTables;
+    // 父表
+    private List<ZTCTableInfo> parentTables;
+    // 外键
+    private String foreignKey;
 
     public String getTableName() {
         return tableName;
@@ -56,35 +50,35 @@ public class ZTCTableInfo {
         this.className = className;
     }
 
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
-
-    public Date getUpdateDate() {
-        return updateDate;
-    }
-
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
     public String getRemarks() {
         return remarks;
     }
 
     public void setRemarks(String remarks) {
         this.remarks = remarks;
+    }
+
+    public List<ZTCTableInfo> getChildTables() {
+        return childTables;
+    }
+
+    public void setChildTables(List<ZTCTableInfo> childTables) {
+        this.childTables = childTables;
+    }
+
+    public List<ZTCTableInfo> getParentTables() {
+        return parentTables;
+    }
+
+    public void setParentTables(List<ZTCTableInfo> parentTables) {
+        this.parentTables = parentTables;
+    }
+
+    public String getForeignKey() {
+        return foreignKey;
+    }
+
+    public void setForeignKey(String foreignKey) {
+        this.foreignKey = foreignKey;
     }
 }

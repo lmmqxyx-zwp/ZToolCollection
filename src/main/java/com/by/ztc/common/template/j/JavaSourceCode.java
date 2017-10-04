@@ -5,6 +5,8 @@ package com.by.ztc.common.template.j;
  *
  * java模板
  *
+ * 1、代码生成
+ *
  * @author zwp
  *
  */

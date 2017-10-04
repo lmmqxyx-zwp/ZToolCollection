@@ -9,7 +9,7 @@ import java.util.Set;
 /**
  * Created by byvai on 2017/9/27.
  *
- * 系统函数
+ * 系统函数 对于JVM系统
  *
  * @author zwp
  *

@@ -149,6 +149,7 @@ class ZjsA implements Serializable{
     }
 }
 
+// 序列化对象，但是没有实现Serializable接口，序列化失败
 class ZjsB {
 
     // ZTC UID 唯一
