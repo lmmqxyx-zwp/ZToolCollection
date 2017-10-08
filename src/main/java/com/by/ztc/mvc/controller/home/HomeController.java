@@ -1,5 +1,6 @@
 package com.by.ztc.mvc.controller.home;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,13 +12,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/ztcHome")
 public class HomeController {
 
-    @RequestMapping(value = "/ztcHomeIndex", method = RequestMethod.GET)
+    Logger logger = Logger.getLogger(HomeController.class);
+
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String ztcHomeIndex() {
-        int a = 10;
-        int b = 20;
-        int c = a + b;
-        System.out.println(c);
-        return "home/ztcHomeIndex";
+        logger.info("ZTC | 前台主页");
+        return "home/index";
     }
 
 

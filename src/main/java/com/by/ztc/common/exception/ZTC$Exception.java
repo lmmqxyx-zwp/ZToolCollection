@@ -6,4 +6,12 @@ package com.by.ztc.common.exception;
  * @author zwp
  */
 public class ZTC$Exception extends Exception {
+
+    public ZTC$Exception() {
+        super();
+    }
+
+    public ZTC$Exception(String message) {
+        super(message);
+    }
 }

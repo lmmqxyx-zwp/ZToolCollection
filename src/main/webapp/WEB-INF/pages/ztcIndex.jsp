@@ -9,12 +9,14 @@
 <html>
 <head>
     <title>ZToolCollection | 主页</title>
+    <link rel="icon" href="../ztcIcon/ztc_24x24.png" type="image/x-icon" />
 </head>
 <body>
     Welcome to ZToolCollection ztcIndex
-    <a href="${ztcHttp}/ztcHome/ztcHomeIndex.ztc">前台主页</a>
+    <br />
+    <a href="${ztcHttp}/ztcHome/index.ztc">前台主页</a>
+    <br />
+    <a href="${ztcHttp}/ztcAdmin/login.ztc">后台主页</a>
+<img src="../ztcIcon/ztc_24x24.png">
 </body>
-<script>
-    alert("${ztcHttp}");
-</script>
 </html>

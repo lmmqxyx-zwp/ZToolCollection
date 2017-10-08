@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>ZTC | 主页</title>
 </head>
 <body>
-    ztcHomeIndex
+    ztcHomeIndex 前台主页
 </body>
 </html>

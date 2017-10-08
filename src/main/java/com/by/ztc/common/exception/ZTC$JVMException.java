@@ -6,5 +6,5 @@ package com.by.ztc.common.exception;
  *
  * @author zwp
  */
-public class ZTC$JVMException extends ZTC$Exception{
+public class ZTC$JVMException extends ZTC$Exception {
 }
