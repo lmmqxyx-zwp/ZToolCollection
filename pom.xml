@@ -5,18 +5,20 @@
   <artifactId>ZToolCollection</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>SourceCode Maven Webapp</name>
+  <name>ZToolCollection</name>
 
   <!-- 常量 -->
   <properties>
-      <ztc.org.springframework.version>4.2.2.RELEASE</ztc.org.springframework.version>
-      <ztc.org.aspectj.version>1.8.1</ztc.org.aspectj.version>
-      <ztc.org.slf4j.version>1.7.12</ztc.org.slf4j.version>
-      <ztc.org.log4j.version>1.2.16</ztc.org.log4j.version>
-      <ztc.javax.inject.version>1</ztc.javax.inject.version>
-      <ztc.java.version>1.8</ztc.java.version>
-      <ztc.org.springframework.security.version>4.0.1.RELEASE</ztc.org.springframework.security.version>
-      <ztc.org.springframework.version>4.2.2.RELEASE</ztc.org.springframework.version>
+      <!--<ztc.org.springframework.version>4.2.2.RELEASE</ztc.org.springframework.version>-->
+      <!--<ztc.org.aspectj.version>1.8.1</ztc.org.aspectj.version>-->
+      <!--<ztc.org.slf4j.version>1.7.12</ztc.org.slf4j.version>-->
+      <!--<ztc.org.log4j.version>1.2.16</ztc.org.log4j.version>-->
+      <!--<ztc.javax.inject.version>1</ztc.javax.inject.version>-->
+      <!--<ztc.java.version>1.8</ztc.java.version>-->
+      <!--<ztc.org.springframework.security.version>4.0.1.RELEASE</ztc.org.springframework.security.version>-->
+      <!--<ztc.org.springframework.version>4.2.2.RELEASE</ztc.org.springframework.version>-->
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <ztc.spring.version>3.1.2.RELEASE</ztc.spring.version>
   </properties>
 
   <url>http://maven.apache.org</url>
@@ -58,18 +60,24 @@
     <!-- MySQL数据库驱动 -->
     <!-- ###################################################################################################################- -->
     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-    <!--<dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>5.0.5</version>
-    </dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>mysql</groupId>-->
+      <!--<artifactId>mysql-connector-java</artifactId>-->
+      <!--<version>5.0.5</version>-->
+    <!--</dependency>-->
 
-    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>3.1.11</version>
+      <version>5.1.31</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <!--<dependency>-->
+      <!--<groupId>mysql</groupId>-->
+      <!--<artifactId>mysql-connector-java</artifactId>-->
+      <!--<version>3.1.11</version>-->
+    <!--</dependency>-->
     <!-- ###################################################################################################################- -->
 
     <!-- Oracle 数据库驱动 -->
@@ -80,306 +88,191 @@
       <artifactId>ojdbc14</artifactId>
       <version>10.2.0.4.0</version>
     </dependency>
-
     <!-- ###################################################################################################################- -->
 
     <!-- springmvc 框架 -->
     <!-- ###################################################################################################################- -->
-    <!-- Spring -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>${ztc.org.springframework.version}</version>
-      <exclusions>
-        <!-- Exclude Commons Logging in favor of SLF4j -->
-        <exclusion>
-          <groupId>commons-logging</groupId>
-          <artifactId>commons-logging</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
+    <!-- spring begin -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>${ztc.org.springframework.version}</version>
+      <version>${ztc.spring.version}</version>
     </dependency>
 
-    <!-- AspectJ -->
     <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjrt</artifactId>
-      <version>${ztc.org.aspectj.version}</version>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${ztc.spring.version}</version>
     </dependency>
 
-    <!-- Logging -->
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>${ztc.org.slf4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>jcl-over-slf4j</artifactId>
-      <version>${ztc.org.slf4j.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>${ztc.org.slf4j.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>${ztc.org.log4j.version}</version>
-      <scope>runtime</scope>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${ztc.spring.version}</version>
     </dependency>
 
-    <!-- @Inject -->
     <dependency>
-      <groupId>javax.inject</groupId>
-      <artifactId>javax.inject</artifactId>
-      <version>${ztc.javax.inject.version}</version>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${ztc.spring.version}</version>
     </dependency>
 
-    <!-- Servlet -->
     <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-servlet-api</artifactId>
-      <version>7.0.30</version>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${ztc.spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${ztc.spring.version}</version>
+    </dependency>
+    <!-- spring end -->
+
+    <!-- web jar -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.1.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>javax.servlet.jsp</groupId>
-      <artifactId>jsp-api</artifactId>
-      <version>2.1</version>
+      <artifactId>javax.servlet.jsp-api</artifactId>
+      <version>2.3.1</version>
       <scope>provided</scope>
     </dependency>
+    <!-- jackson jar -->
     <dependency>
-      <groupId>javax.servlet.jsp.jstl</groupId>
-      <artifactId>jstl-api</artifactId>
-      <version>1.2</version>
-      <exclusions>
-        <exclusion>
-          <groupId>javax.servlet</groupId>
-          <artifactId>servlet-api</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish.web</groupId>
-      <artifactId>jstl-impl</artifactId>
-      <version>1.2</version>
-      <exclusions>
-        <exclusion>
-          <groupId>javax.servlet</groupId>
-          <artifactId>servlet-api</artifactId>
-        </exclusion>
-      </exclusions>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-jaxrs</artifactId>
+      <version>1.9.11</version>
     </dependency>
 
-    <!-- Jackson JSON Processor -->
+    <!-- commons jar -->
     <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>2.5.3</version>
-    </dependency>
-
-    <!-- Rome Atom+RSS -->
-    <dependency>
-      <groupId>com.rometools</groupId>
-      <artifactId>rome</artifactId>
-      <version>1.5.0</version>
-    </dependency>
-
-    <!-- JSR 303 with Hibernate Validator -->
-    <dependency>
-      <groupId>javax.validation</groupId>
-      <artifactId>validation-api</artifactId>
-      <version>1.0.0.GA</version>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-validator</artifactId>
-      <version>4.1.0.Final</version>
-    </dependency>
-
-    <!-- Joda Time Library -->
-    <dependency>
-      <groupId>joda-time</groupId>
-      <artifactId>joda-time</artifactId>
-      <version>2.3</version>
-    </dependency>
-
-    <!-- File Upload -->
-    <dependency>
-      <groupId>commons-fileupload</groupId>
-      <artifactId>commons-fileupload</artifactId>
-      <version>1.2.2</version>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.3.2</version>
     </dependency>
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>2.0.1</version>
-    </dependency>
-
-    <!-- Security (used for CSRF protection only) -->
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-web</artifactId>
-      <version>${ztc.org.springframework.security.version}</version>
-    </dependency>
-
-    <!-- Test -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>${ztc.org.springframework.version}</version>
-      <scope>test</scope>
+      <version>2.4</version>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>4.0</version>
     </dependency>
     <dependency>
-      <groupId>xmlunit</groupId>
-      <artifactId>xmlunit</artifactId>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>1.8</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.8.3</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-chain</groupId>
+      <artifactId>commons-chain</artifactId>
       <version>1.2</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.jayway.jsonpath</groupId>
-      <artifactId>json-path</artifactId>
-      <version>0.8.1</version>
-      <scope>test</scope>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.3.1</version>
     </dependency>
     <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-library</artifactId>
-      <version>1.3</version>
-      <scope>test</scope>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-math3</artifactId>
+      <version>3.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-pool2</artifactId>
+      <version>2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-digester3</artifactId>
+      <version>3.2</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-net</groupId>
+      <artifactId>commons-net</artifactId>
+      <version>3.3</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-dbutils</groupId>
+      <artifactId>commons-dbutils</artifactId>
+      <version>1.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-email</artifactId>
+      <version>1.3.3</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.4</version>
+    </dependency>
+
+    <!-- jstl jar -->
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>taglibs</groupId>
+      <artifactId>standard</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+    <!-- 日志相关 -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.16</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.5</version>
     </dependency>
     <!-- ###################################################################################################################- -->
   </dependencies>
 
-
-  <!--&lt;!&ndash; 仓库 &ndash;&gt;-->
-  <!--<repositories>-->
-    <!--&lt;!&ndash; For testing against latest Spring snapshots &ndash;&gt;-->
-    <!--<repository>-->
-      <!--<id>org.springframework.maven.snapshot</id>-->
-      <!--<name>Spring Maven Snapshot Repository</name>-->
-      <!--<url>http://repo.spring.io/snapshot</url>-->
-      <!--<releases><enabled>false</enabled></releases>-->
-      <!--<snapshots><enabled>true</enabled></snapshots>-->
-    <!--</repository>-->
-    <!--&lt;!&ndash; For developing against latest Spring milestones &ndash;&gt;-->
-    <!--<repository>-->
-      <!--<id>org.springframework.maven.milestone</id>-->
-      <!--<name>Spring Maven Milestone Repository</name>-->
-      <!--<url>http://repo.spring.io/milestone</url>-->
-      <!--<snapshots><enabled>false</enabled></snapshots>-->
-    <!--</repository>-->
-    <!--<repository>-->
-      <!--<id>MavenRepository</id>-->
-      <!--<name>MavenRepository</name>-->
-      <!--<url>http://mvnrepository.com</url>-->
-      <!--<snapshots><enabled>true</enabled></snapshots>-->
-    <!--</repository>-->
-  <!--</repositories>-->
-
   <!-- 编译 -->
   <build>
     <finalName>${project.artifactId}</finalName>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
-        <configuration>
-          <source>${ztc.java.version}</source>
-          <target>${ztc.java.version}</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.12</version>
-        <configuration>
-          <includes>
-            <include>**/*Tests.java</include>
-          </includes>
-          <excludes>
-            <exclude>**/Abstract*.java</exclude>
-          </excludes>
-          <junitArtifactName>junit:junit</junitArtifactName>
-          <argLine>-Xmx512m</argLine>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>install</id>
-            <phase>install</phase>
-            <goals>
-              <goal>sources</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>aspectj-maven-plugin</artifactId>
-        <!-- Have to use version 1.2 since version 1.3 does not appear to work with ITDs -->
-        <version>1.2</version>
-        <dependencies>
-          <!-- You must use Maven 2.0.9 or above or these are ignored (see MNG-2972) -->
-          <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-            <version>${ztc.org.aspectj.version}</version>
-          </dependency>
-          <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjtools</artifactId>
-            <version>${ztc.org.aspectj.version}</version>
-          </dependency>
-        </dependencies>
-        <executions>
-          <execution>
-            <goals>
-              <goal>compile</goal>
-              <goal>test-compile</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <outxml>true</outxml>
-          <source>${ztc.java.version}</source>
-          <target>${ztc.java.version}</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat7-maven-plugin</artifactId>
-        <version>2.2</version>
-      </plugin>
-      <plugin>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-maven-plugin</artifactId>
-        <version>9.0.6.v20130930</version>
-        <configuration>
-          <webApp>
-            <contextPath>/${project.artifactId}</contextPath>
-          </webApp>
-        </configuration>
-      </plugin>
-    </plugins>
   </build>
+
+  <!-- 仓库 -->
+  <repositories>
+    <repository>
+      <id>MavenRepository</id>
+      <name>MavenRepository</name>
+      <url>http://mvnrepository.com</url>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+  </repositories>
 
 </project>

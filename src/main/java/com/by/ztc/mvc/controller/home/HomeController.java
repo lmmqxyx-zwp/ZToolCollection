@@ -1,4 +1,4 @@
-package com.by.ztc.controller.home;
+package com.by.ztc.mvc.controller.home;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by byvai on 2017/10/4.
  */
 @Controller
-@RequestMapping("/ztc/ztcHome")
+@RequestMapping("/ztcHome")
 public class HomeController {
 
-    @RequestMapping(value = "ztcHomeIndex", method = RequestMethod.GET)
+    @RequestMapping(value = "/ztcHomeIndex", method = RequestMethod.GET)
     public String ztcHomeIndex() {
         int a = 10;
         int b = 20;

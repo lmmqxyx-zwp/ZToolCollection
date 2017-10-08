@@ -12,7 +12,9 @@
 </head>
 <body>
     Welcome to ZToolCollection ztcIndex
-
-    <a href="/ztc/ztcHome/ztcHomeIndex">前台主页</a>
+    <a href="${ztcHttp}/ztcHome/ztcHomeIndex.ztc">前台主页</a>
 </body>
+<script>
+    alert("${ztcHttp}");
+</script>
 </html>
