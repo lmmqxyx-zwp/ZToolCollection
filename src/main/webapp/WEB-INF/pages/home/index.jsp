@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>ZTC | 主页</title>
+    <link rel="icon" href="/ztcIcon.ico" type="image/x-icon" />
 </head>
 <body>
     ztcHomeIndex 前台主页

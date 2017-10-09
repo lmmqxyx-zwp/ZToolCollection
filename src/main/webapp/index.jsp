@@ -1,5 +1,12 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>ZTC | 主页</title>
+</head>
+<body>
 <%
-String path = request.getContextPath();
-response.sendRedirect(path+"/ztc/index.ztc");
+    String path = request.getContextPath();
+    response.sendRedirect(path+"/ztc/index.ztc");
 %>
+</body>
+</html>

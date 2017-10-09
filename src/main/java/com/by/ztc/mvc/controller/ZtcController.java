@@ -36,9 +36,17 @@ public class ZtcController {
             throw new ZTC$MVCException("session is null 错误");// 配置文件读取
         } else {
             request.getSession().setAttribute("ztcHttp", request.getContextPath());
+            request.getSession().setAttribute("ztcIcon", this.icon(request));
         }
         // ztcHttp 是用来在JSP页面使用
-        // 一旦丢失、则出现异常、说明SESSION超市
+        // 一旦丢失、则出现异常、说明SESSION超时
         return "ztcIndex";
+    }
+
+    private String icon(HttpServletRequest request) {
+        String requestUrl = request.getRequestURL().toString();
+        String servletPath = request.getServletPath();
+        String icon = requestUrl.substring(0, requestUrl.length() - servletPath.length());
+        return icon;
     }
 }
