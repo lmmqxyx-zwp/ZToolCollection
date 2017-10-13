@@ -54,4 +54,13 @@
     <!-- 当配置了<mvc:annotation-driven/>后，会自动加载org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping和org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter，所以如果显示的配置则需去掉配置<mvc:annotation-driven/> -->
     <!--<mvc:annotation-driven/>-->
     <!--<import resource="ztc-controllers.xml" />-->
+       
+       
+    <!-- 静态资源文件的访问 -->
+    <mvc:default-servlet-handler />
+    <!-- 静态资源文件的映射 -->
+    <mvc:resources mapping="" location="" cache-period="2323434"/>
+    <!-- 定义/的映射 -->
+    <mvc:view-controller path="/" view-name="redirect:${ztc.index}"/>
+
 </beans>
