@@ -7,6 +7,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd	http://www.springframework.org/schema/context	http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd"
        default-lazy-init="true">
 
+    <!-- 静态资源文件的映射 -->
+    <!--<mvc:resources mapping="/statics/**" location="/statics/" />-->
+    <!-- 静态资源文件的访问 -->
+    <!--<mvc:default-servlet-handler />-->
+    <!-- 定义/的映射 -->
+    <!--<mvc:view-controller path="/" view-name="redirect:${ztc.index}"/>-->
+
     <!-- 启动事务添加配置 -->
     <context:component-scan base-package="com.by.ztc.mvc">
         <!-- 排除扫描service标签 -->
@@ -54,13 +61,5 @@
     <!-- 当配置了<mvc:annotation-driven/>后，会自动加载org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping和org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter，所以如果显示的配置则需去掉配置<mvc:annotation-driven/> -->
     <!--<mvc:annotation-driven/>-->
     <!--<import resource="ztc-controllers.xml" />-->
-       
-       
-    <!-- 静态资源文件的访问 -->
-    <mvc:default-servlet-handler />
-    <!-- 静态资源文件的映射 -->
-    <mvc:resources mapping="" location="" cache-period="2323434"/>
-    <!-- 定义/的映射 -->
-    <mvc:view-controller path="/" view-name="redirect:${ztc.index}"/>
 
 </beans>
