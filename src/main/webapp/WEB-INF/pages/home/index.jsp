@@ -13,5 +13,13 @@
 </head>
 <body>
     ztcHomeIndex 前台主页
+
+    <form action="/ztc/ztcApp/uploadImage.ztc" method="post" enctype="multipart/form-data">
+
+        <input type="file" name="up">
+
+        <button type="submit">ssss</button>
+
+    </form>
 </body>
 </html>
