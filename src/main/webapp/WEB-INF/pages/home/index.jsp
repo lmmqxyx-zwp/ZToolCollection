@@ -18,7 +18,7 @@
 
         <input type="file" name="up">
 
-        <button type="submit">ssss</button>
+        <button type="submit">文件上传</button>
 
     </form>
 </body>

@@ -39,7 +39,7 @@ public class AppController {
         List<FileItem> itemList;
 
         // 创建上传临时目录
-        String uploadPath = "E:/temp/android/uploadImage/";
+        String uploadPath = "E:/temp/android/uploadImage/"; //TODO
         File dir = new File(uploadPath);
 
         try {
