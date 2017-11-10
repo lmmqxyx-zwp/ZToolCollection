@@ -31,7 +31,7 @@
         html2canvas(document.getElementById('view'), {
             onrendered: function (canvas) {
                 //document.body.appendChild(canvas);
-                var ctxImage = canvas.toDataURL("image/png");
+                var ctxImage = canvas.toDataURL("image/jpeg");
                 console.log(ctxImage);
                 //并将图片上传到服务器
                 var url = "/ztc/testFunction/ctxImage.ztc";

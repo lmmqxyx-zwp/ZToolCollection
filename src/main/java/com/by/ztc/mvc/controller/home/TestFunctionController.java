@@ -49,20 +49,17 @@ public class TestFunctionController {
     @RequestMapping(value = "ctxImage", method = RequestMethod.POST)
     public String ctxImage(HttpServletRequest request, HttpServletResponse response, Model model) {
 
-        String serverPath = request.getSession().getServletContext().getRealPath("/");
-        serverPath = "E:\\gitClient\\ZToolCollection\\src\\main\\resources\\ztctemp\\";
+        String serverPath = request.getSession().getServletContext()
+                .getRealPath("/");
         Base64 base64 = new Base64();
         try {
-
             String data = request.getParameter("data");
-
             //注意点：实际的图片数据是从 data:image/jpeg;base64, 后开始的
             byte[] k = base64.decode(data.substring("data:image/jpeg;base64,"
                     .length()));
             InputStream is = new ByteArrayInputStream(k);
             String fileName = UUID.randomUUID().toString();
-//            String imgFilePath = serverPath + "\\static\\usertemp\\" + fileName + ".jpg";
-            String imgFilePath = serverPath + fileName + ".jpg";
+            String imgFilePath = "E:/" + fileName + ".jpg";
 
             //以下其实可以忽略，将图片压缩处理了一下，可以小一点
 
@@ -80,7 +77,6 @@ public class TestFunctionController {
             ImageIO.write(tag, "jpg", new File(imgFilePath));
             return fileName;
         } catch (Exception e) {
-            e.printStackTrace();
             return "error";
         }
     }
