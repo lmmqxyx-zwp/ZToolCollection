@@ -29,11 +29,11 @@
 
 
     <!-- 配置web.xml，使其具有springmvc特性，主要配置两处，一个是ContextLoaderListener，一个是DispatcherServlet -->
-
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath*:/xml/ztc-web-context.xml</param-value>
     </context-param>
+
     <!-- 配置ContextLoaderListener表示，该工程要以spring的方式启动。启动时会默认在/WEB-INF目录下查找applicationContext.xml作为spring容器的配置文件，该文件里可以初始化一些bean -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -77,9 +77,14 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
+    <!-- 配置错误页面 -->
     <error-page>
         <error-code>404</error-code>
         <location>/WEB-INF/pages/errors/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/pages/errors/500.jsp</location>
     </error-page>
 
 </web-app>

@@ -1,15 +1,15 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: zwp
-  Date: 2017/9/25
-  Time: 14:45
-  To change this template use File | Settings | File Templates.
+  author: zwp
+  Date: 2017/9/25 14:45
+  功能：ZTC主页
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="taglib.jsp"%>
+
 <html>
 <head>
     <title>ZToolCollection | 主页</title>
-    <link rel="icon" href="/ztcIcon.ico" type="image/x-icon" />
+    <link rel="icon" href="${ctx}/ztcIcon.ico" type="image/x-icon" />
 </head>
 <body>
     Welcome to ZToolCollection ztcIndex

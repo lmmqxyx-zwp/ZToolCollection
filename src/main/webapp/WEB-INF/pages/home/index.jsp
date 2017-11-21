@@ -6,10 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="../taglib.jsp"%>
 <html>
 <head>
     <title>ZTC | 主页</title>
-    <link rel="icon" href="/ztcIcon.ico" type="image/x-icon" />
+    <link rel="icon" href="${ctx}/ztcIcon.ico" type="image/x-icon" />
 </head>
 <body>
     ztcHomeIndex 前台主页
